@@ -1,9 +1,10 @@
-// Variables de colores
+
 $color-header: #964737;
 $color-footer: #000000;
 $color-text: white;
+$color-hover: #ffcc00; 
 
-// Mixin para flexbox
+
 @mixin flexbox($direction: row, $justify: center, $align: center, $gap: 0) {
     display: flex;
     flex-direction: $direction;
@@ -13,19 +14,23 @@ $color-text: white;
     flex-wrap: wrap;
 }
 
-// Extends
-%list-reset {
+
+@mixin list-reset {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-%link-reset {
+@mixin link-reset {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: $color-hover;
+    }
 }
 
-// Header y Nav
 header {
     @include flexbox(row, space-between, center);
     padding: 20px;
@@ -37,18 +42,17 @@ header {
     }
 
     .nav-ul {
-        @extend %list-reset;
+        @include list-reset;
         @include flexbox(row, center, center, 20px);
 
         li a {
-            @extend %link-reset;
+            @include link-reset;
         }
     }
 }
 
-// Aside (Carousel)
 .carousel-item img {
-    height: 500px;
+    height: 500px; 
     object-fit: cover;
     width: 100%;
 }
@@ -77,7 +81,7 @@ h2 {
 footer {
     background-color: $color-footer;
     color: $color-text;
-    @include flexbox(row, space-around, center);
+    @include flexbox(row, space-around, center, 20px); 
     padding: 20px;
     text-align: left;
 
@@ -87,17 +91,15 @@ footer {
         }
 
         ul {
-            @extend %list-reset;
-            
+            @include list-reset;
+
             a {
-                @extend %link-reset;
-                color: $color-text;
+                @include link-reset;
             }
         }
     }
 }
 
-// Media Queries
 @media (max-width: 1024px) {
     header {
         @include flexbox(column, center, center);
@@ -108,17 +110,13 @@ footer {
         @include flexbox(column, center, center, 10px);
     }
 
-    .carousel-item img {
-        height: 500px;
-    }
-
     main {
         padding: 10px;
     }
 
     footer {
         @include flexbox(column, center, center);
-        text-align: center;
+        text-align: center; 
     }
 
     .footer-section {
@@ -129,10 +127,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .carousel-item img {
-        height: 500px;
-    }
-
     .carousel-caption {
         bottom: 5%;
         width: 90%;
@@ -141,7 +135,7 @@ footer {
 
 @media (min-width: 1440px) {
     .carousel-item img {
-        height: 700px;
+        height: 700px; 
     }
 
     .carousel-caption {
