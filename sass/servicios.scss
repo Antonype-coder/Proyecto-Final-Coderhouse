@@ -2,7 +2,6 @@ $color-primary: #0f3a56;
 $color-bg-hover: #8c5252;
 $color-text: rgb(255, 255, 255);
 
-
 @mixin service-card {
     background: $color-bg-hover;
     padding: 20px;
@@ -17,18 +16,16 @@ $color-text: rgb(255, 255, 255);
     }
 }
 
-
 .servicios-grid {
     display: grid;
     gap: 20px;
     padding: 20px;
 
-    
-    @media (max-width: 767px) { // 📱 Móvil
+    @media (max-width: 767px) { 
         grid-template-columns: 1fr;
     }
 
-    @media (min-width: 768px) and (max-width: 1023px) { // 📲 Tablet
+    @media (min-width: 768px) and (max-width: 1023px) { 
         grid-template-columns: repeat(2, 1fr);
     }
 
