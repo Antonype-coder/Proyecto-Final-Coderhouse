@@ -138,6 +138,15 @@ footer .footer-section ul a:hover {
     width: 70%;
   }
 }
+ul {
+  list-style: none;
+}
+
+img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
 .servicios-grid {
   display: grid;
   gap: 20px;
