@@ -162,6 +162,7 @@ footer .footer-section ul a:hover {
   background: #8c5252;
   padding: 20px;
   text-align: center;
+  border-radius: 10px;
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
   overflow: hidden;
 }

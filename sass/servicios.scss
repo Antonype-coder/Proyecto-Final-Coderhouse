@@ -8,6 +8,7 @@ $color-text: rgb(255, 255, 255);
     background: $color-bg-hover;
     padding: 20px;
     text-align: center;
+    border-radius: 10px;
     transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 
     &:hover {
