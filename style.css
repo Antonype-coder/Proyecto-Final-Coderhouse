@@ -142,9 +142,12 @@ ul {
   list-style: none;
 }
 
+img {
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
 img:hover {
   transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
 }
 
 .servicios-grid {
