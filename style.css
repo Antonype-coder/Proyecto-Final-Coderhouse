@@ -179,9 +179,8 @@ footer .footer-section ul a:hover {
     width: 70%;
   }
 }
-.main-content {
+.main-content h3 {
   text-align: center;
-  padding: 20px;
 }
 
 .team {
