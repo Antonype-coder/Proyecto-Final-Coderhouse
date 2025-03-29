@@ -1,0 +1,177 @@
+// Variables de colores
+$primary-color: #28a745; // Verde Bootstrap
+$hover-color: #218838;
+$border-color: #ddd;
+$bg-light: #f8f9fa;
+$text-color: #333;
+
+// Mixin para bordes redondeados
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Mixin para transiciones
+@mixin transition($property, $time) {
+  transition: $property $time ease-in-out;
+}
+
+// Estructura general
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+// Sidebar de filtros
+.sidebar {
+  width: 25%;
+  background: $bg-light;
+  padding: 20px;
+  border-right: 1px solid $border-color;
+
+  .filter-section {
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 1.2em;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: $primary-color;
+      color: white;
+      border: none;
+      cursor: pointer;
+      @include border-radius(5px);
+      @include transition(background, 0.3s);
+
+      &:hover {
+        background: $hover-color;
+      }
+    }
+  }
+}
+
+// Sección de productos
+.products {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+// Estilo para cada producto
+.product {
+  border: 1px solid $border-color;
+  @include border-radius(10px);
+  padding: 10px;
+  text-align: center;
+  background: white;
+  @include transition(transform, 0.3s);
+
+  // Aplica efecto de crecimiento en hover
+  &:hover {
+    transform: scale(1.05);
+
+    // Cuando se pasa el mouse, la imagen vuelve a color
+    img {
+      filter: grayscale(0%);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(100%); // Imagen en escala de grises por defecto
+    @include border-radius(10px);
+    @include transition(filter, 0.3s);
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size: 1em;
+    color: $text-color;
+  }
+
+  p {
+    font-size: 1em;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  .btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    cursor: pointer;
+    @include border-radius(5px);
+    @include transition(background, 0.3s);
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
+
+// Media Queries para Responsividad
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 20px;
+  }
+
+  .products {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .product img {
+    height: 120px;
+  }
+
+  .btn {
+    font-size: 0.8em;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .product img {
+    height: 100px;
+  }
+
+  .btn {
+    font-size: 0.7em;
+    padding: 4px 8px;
+  }
+}
+
