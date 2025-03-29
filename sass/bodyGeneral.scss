@@ -41,14 +41,14 @@ footer {
     }
 }
 
-aside {
+#carouselExampleCaptions {
     opacity: 0;
     transform: translateY(50px);
-    animation: fadeInMain 1s ease-in-out forwards;
+    animation: fadeInBarra1 1s ease-in-out forwards;
     animation-delay: 0.5s;
 }
 
-@keyframes fadeInMain {
+@keyframes fadeInBarra1 {
     from {
         opacity: 0;
         transform: translateY(50px);
@@ -62,11 +62,11 @@ aside {
 .promociones-barra {
     opacity: 0;
     transform: translateY(50px);
-    animation: fadeInMain 1s ease-in-out forwards;
+    animation: fadeInBarra2 1s ease-in-out forwards;
     animation-delay: 0.5s;
 }
 
-@keyframes fadeInMain {
+@keyframes fadeInBarra2 {
     from {
         opacity: 0;
         transform: translateY(50px);
