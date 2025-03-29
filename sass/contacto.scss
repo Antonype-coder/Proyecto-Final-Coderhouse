@@ -1,3 +1,35 @@
+$bg-barra: #b12f2f;
+$text-color-barra: #ffffff;
+
+.promociones-barra-2 {
+  background-color: $bg-barra;
+  color: $text-color-barra;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .promociones-contenido-2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: moverTexto 15s linear infinite;
+  }
+
+  @keyframes moverTexto {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
 .map-container {
     position: relative;
     width: 100%;
