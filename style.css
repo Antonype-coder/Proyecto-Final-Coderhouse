@@ -197,33 +197,17 @@ main {
 
 .sidebar {
   width: 25%;
-  background: #f8f9fa;
+  background: #d6dce1;
   padding: 20px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #cd8585;
 }
 .sidebar .filter-section {
   margin-bottom: 20px;
 }
 .sidebar .filter-section h3 {
   font-size: 1.2em;
-  color: #333;
+  color: #a15555;
   margin-bottom: 10px;
-}
-.sidebar .filter-section input[type=checkbox] {
-  margin-right: 5px;
-}
-.sidebar .filter-section button {
-  width: 100%;
-  padding: 10px;
-  background: #28a745;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
-}
-.sidebar .filter-section button:hover {
-  background: #218838;
 }
 
 .products {
@@ -235,7 +219,7 @@ main {
 }
 
 .product {
-  border: 1px solid #ddd;
+  border: 1px solid #cd8585;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
@@ -259,33 +243,18 @@ main {
 .product h3 {
   margin-top: 10px;
   font-size: 1em;
-  color: #333;
+  color: #a15555;
 }
 .product p {
   font-size: 1em;
   font-weight: bold;
-  color: #28a745;
-}
-.product .btn {
-  margin-top: 10px;
-  padding: 6px 12px;
-  font-size: 0.9em;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
-}
-.product .btn:hover {
-  background-color: #218838;
 }
 
 @media (max-width: 1024px) {
   .sidebar {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #cd8585;
     padding-bottom: 20px;
   }
   .products {
@@ -304,10 +273,6 @@ main {
   .product img {
     height: 120px;
   }
-  .btn {
-    font-size: 0.8em;
-    padding: 5px 10px;
-  }
 }
 @media (max-width: 320px) {
   .products {
@@ -315,10 +280,6 @@ main {
   }
   .product img {
     height: 100px;
-  }
-  .btn {
-    font-size: 0.7em;
-    padding: 4px 8px;
   }
 }
 .servicios-grid {

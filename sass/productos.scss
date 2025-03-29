@@ -1,28 +1,24 @@
-// Variables de colores
-$primary-color: #28a745; // Verde Bootstrap
-$hover-color: #218838;
-$border-color: #ddd;
-$bg-light: #f8f9fa;
-$text-color: #333;
 
-// Mixin para bordes redondeados
+$border-color: #cd8585;
+$bg-light: #d6dce1;
+$text-color: #a15555;
+
+
 @mixin border-radius($radius) {
   border-radius: $radius;
 }
 
-// Mixin para transiciones
+
 @mixin transition($property, $time) {
   transition: $property $time ease-in-out;
 }
 
-// Estructura general
 main {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
 }
 
-// Sidebar de filtros
 .sidebar {
   width: 25%;
   background: $bg-light;
@@ -38,28 +34,10 @@ main {
       margin-bottom: 10px;
     }
 
-    input[type="checkbox"] {
-      margin-right: 5px;
-    }
 
-    button {
-      width: 100%;
-      padding: 10px;
-      background: $primary-color;
-      color: white;
-      border: none;
-      cursor: pointer;
-      @include border-radius(5px);
-      @include transition(background, 0.3s);
-
-      &:hover {
-        background: $hover-color;
-      }
-    }
   }
 }
 
-// Sección de productos
 .products {
   width: 75%;
   display: grid;
@@ -68,7 +46,6 @@ main {
   padding: 20px;
 }
 
-// Estilo para cada producto
 .product {
   border: 1px solid $border-color;
   @include border-radius(10px);
@@ -77,11 +54,9 @@ main {
   background: white;
   @include transition(transform, 0.3s);
 
-  // Aplica efecto de crecimiento en hover
   &:hover {
     transform: scale(1.05);
 
-    // Cuando se pasa el mouse, la imagen vuelve a color
     img {
       filter: grayscale(0%);
     }
@@ -91,7 +66,7 @@ main {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    filter: grayscale(100%); // Imagen en escala de grises por defecto
+    filter: grayscale(100%); 
     @include border-radius(10px);
     @include transition(filter, 0.3s);
   }
@@ -105,27 +80,9 @@ main {
   p {
     font-size: 1em;
     font-weight: bold;
-    color: $primary-color;
-  }
-
-  .btn {
-    margin-top: 10px;
-    padding: 6px 12px;
-    font-size: 0.9em;
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    cursor: pointer;
-    @include border-radius(5px);
-    @include transition(background, 0.3s);
-
-    &:hover {
-      background-color: $hover-color;
-    }
   }
 }
 
-// Media Queries para Responsividad
 @media (max-width: 1024px) {
   .sidebar {
     width: 100%;
@@ -154,10 +111,6 @@ main {
     height: 120px;
   }
 
-  .btn {
-    font-size: 0.8em;
-    padding: 5px 10px;
-  }
 }
 
 @media (max-width: 320px) {
@@ -169,9 +122,5 @@ main {
     height: 100px;
   }
 
-  .btn {
-    font-size: 0.7em;
-    padding: 4px 8px;
-  }
 }
 
