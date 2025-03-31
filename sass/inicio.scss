@@ -40,8 +40,6 @@ header {
 
         li a {
             @include link-reset;
-            padding: 8px 12px;
-            border-radius: 4px;
             text-align: center;
         }
     }
