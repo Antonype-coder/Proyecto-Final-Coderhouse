@@ -34,12 +34,6 @@ header {
     background-color: $color-header;
     color: $color-text;
 
-    .logo {
-        margin-right: auto;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
     .nav-ul {
         @include list-reset;
         @include flexbox(row, center, center, 20px);
@@ -48,10 +42,7 @@ header {
             @include link-reset;
             padding: 8px 12px;
             border-radius: 4px;
-            
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.1);
-            }
+            text-align: center;
         }
     }
 }
@@ -82,7 +73,6 @@ footer {
     color: $color-text;
     @include flexbox(row, space-around, center, 20px); 
     padding: 20px;
-    text-align: left;
 
     .footer-section {
         h3 {
@@ -100,27 +90,20 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    main {
-        padding: 10px;
-    }
-
     footer {
         @include flexbox(column, center, center);
-        text-align: center; 
-    }
-
-    .footer-section {
-        margin-bottom: 15px;
-        width: 100%;
-        text-align: center;
+        
+        .footer-section {
+            margin-bottom: 15px;
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 
 @media (max-width: 700px) {
     header {
         @include flexbox(column, center, center, 15px);
-        text-align: center;
-        padding: 15px;
 
         .logo {
             margin-right: 0;
@@ -133,7 +116,6 @@ footer {
             
             li {
                 width: 100%;
-                text-align: center;
                 
                 a {
                     display: block;
@@ -141,13 +123,6 @@ footer {
                 }
             }
         }
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel-caption {
-        bottom: 5%;
-        width: 90%;
     }
 }
 
