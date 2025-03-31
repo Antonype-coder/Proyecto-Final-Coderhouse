@@ -47,12 +47,14 @@ header {
   align-items: center;
   gap: 0;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 15px 20px;
   background-color: #964737;
   color: white;
 }
 header .logo {
   margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 header .nav-ul {
   list-style: none;
@@ -69,9 +71,14 @@ header .nav-ul li a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease-in-out;
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 header .nav-ul li a:hover {
   color: #ffcc00;
+}
+header .nav-ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .carousel-item img {
@@ -125,23 +132,6 @@ footer .footer-section ul a:hover {
 }
 
 @media (max-width: 1024px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .nav-ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
   main {
     padding: 10px;
   }
@@ -158,6 +148,39 @@ footer .footer-section ul a:hover {
     margin-bottom: 15px;
     width: 100%;
     text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 15px;
+  }
+  header .logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  header .nav-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  header .nav-ul li {
+    width: 100%;
+    text-align: center;
+  }
+  header .nav-ul li a {
+    display: block;
+    padding: 10px;
   }
 }
 @media (max-width: 768px) {
