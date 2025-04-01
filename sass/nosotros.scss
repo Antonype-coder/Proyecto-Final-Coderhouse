@@ -1,5 +1,4 @@
-$primary-color: #333;
-$secondary-color: #f4f4f4;
+$background-color-card:rgb(255, 255, 255);
 $spacing: 20px;
 
 .main-content h3 {
@@ -22,7 +21,7 @@ $spacing: 20px;
 }
 
 .team-member {
-  background: white;
+  background: $background-color-card;
   padding: $spacing;
   border-radius: 10px;
   text-align: center;

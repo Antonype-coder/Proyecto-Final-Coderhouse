@@ -1,7 +1,6 @@
-$color-header: #964737;
 $color-footer: #000000;
-$color-text: white;
-$color-hover: #ffcc00; 
+$color-text-footer: rgb(255, 255, 255);
+$color-hover: #afa067;
 
 @mixin flexbox($direction: row, $justify: center, $align: center, $gap: 0) {
     display: flex;
@@ -28,23 +27,6 @@ $color-hover: #ffcc00;
     }
 }
 
-header {
-    @include flexbox(row, space-between, center);
-    padding: 15px 20px;
-    background-color: $color-header;
-    color: $color-text;
-
-    .nav-ul {
-        @include list-reset;
-        @include flexbox(row, center, center, 20px);
-
-        li a {
-            @include link-reset;
-            text-align: center;
-        }
-    }
-}
-
 .carousel-item img {
     height: 500px; 
     object-fit: cover;
@@ -68,7 +50,7 @@ h2 {
 
 footer {
     background-color: $color-footer;
-    color: $color-text;
+    color: $color-text-footer;
     @include flexbox(row, space-around, center, 20px); 
     padding: 20px;
 
@@ -100,27 +82,9 @@ footer {
 }
 
 @media (max-width: 700px) {
-    header {
-        @include flexbox(column, center, center, 15px);
-
-        .logo {
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
-
-        .nav-ul {
-            @include flexbox(column, center, center, 10px);
-            width: 100%;
-            
-            li {
-                width: 100%;
-                
-                a {
-                    display: block;
-                    padding: 10px;
-                }
-            }
-        }
+    .carousel-caption {
+        bottom: 5%;
+        width: 95%;
     }
 }
 
