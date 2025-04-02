@@ -1,6 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 .promociones-barra-2 {
-  background-color: #b12f2f;
+  background-color: #cea7a7;
   color: #ffffff;
   font-size: 40px;
   text-align: center;
@@ -162,7 +162,7 @@ main {
 
 .sidebar {
   width: 25%;
-  background: #d6dce1;
+  background: #e2d7d7;
   padding: 20px;
   border-radius: 10px;
 }
@@ -171,7 +171,7 @@ main {
 }
 .sidebar .filter-section h3 {
   font-size: 1.2em;
-  color: #a15555;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -208,15 +208,11 @@ main {
 .product h3 {
   margin-top: 10px;
   font-size: 1em;
-  color: #a15555;
-}
-.product p {
-  font-size: 1em;
-  font-weight: bold;
+  color: #000000;
 }
 
 .promociones-barra {
-  background-color: #563939;
+  background-color: #cea7a7;
   color: #ffffff;
   font-size: 40px;
   text-align: center;
@@ -295,7 +291,7 @@ main {
   }
 }
 .servicios-grid .servicios-caja {
-  background: #8c5252;
+  background: #d4d3d3;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
@@ -304,8 +300,8 @@ main {
 }
 .servicios-grid .servicios-caja:hover {
   transform: scale(1.05);
-  background: #0f3a56;
-  color: #cccccc;
+  background: #9fbccf;
+  color: black;
 }
 .servicios-grid .servicios-caja img {
   width: 100%;

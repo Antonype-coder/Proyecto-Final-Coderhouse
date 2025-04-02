@@ -1,7 +1,7 @@
 $border-color: #000000;
-$bg-light: #d6dce1;
-$text-color: #a15555;
-$bg-barra: #563939;
+$bg-light: #e2d7d7;
+$text-color: #000000;
+$bg-barra: #cea7a7;
 $text-color-barra: #ffffff;
 
 @mixin border-radius($radius) {
@@ -72,11 +72,6 @@ main {
     margin-top: 10px;
     font-size: 1em;
     color: $text-color;
-  }
-
-  p {
-    font-size: 1em;
-    font-weight: bold;
   }
 }
 
