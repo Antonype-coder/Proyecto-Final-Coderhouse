@@ -26,6 +26,15 @@
   }
 }
 
+header {
+  background-color: #aebfcf;
+}
+header .navbar .navbar-brand,
+header .navbar .nav-link,
+header .navbar .navbar-nav .nav-item .nav-link {
+  color: #ffffff;
+}
+
 .carousel-item img {
   height: 500px;
   object-fit: cover;

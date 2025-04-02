@@ -1,3 +1,6 @@
+$color-header: #aebfcf;    
+$color-text-header: #ffffff;      
+$color-hover: #3498db;  
 $color-footer: #000000;
 $color-text-footer: rgb(255, 255, 255);
 $color-hover: #afa067;
@@ -26,6 +29,20 @@ $color-hover: #afa067;
         color: $color-hover;
     }
 }
+
+header {
+    background-color: $color-header;
+  
+    .navbar {
+      .navbar-brand,
+      .nav-link,
+      .navbar-nav .nav-item .nav-link {
+        color: $color-text-header;
+
+        }
+    }
+}
+
 
 .carousel-item img {
     height: 500px; 
