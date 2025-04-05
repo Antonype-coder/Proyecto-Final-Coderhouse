@@ -42,14 +42,7 @@ header .navbar .navbar-nav .nav-item .nav-link {
 }
 
 .carousel-caption {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
 }
 
 h2 {
@@ -97,21 +90,6 @@ footer .footer-section ul a:hover {
     margin-bottom: 15px;
     width: 100%;
     text-align: center;
-  }
-}
-@media (max-width: 700px) {
-  .carousel-caption {
-    bottom: 5%;
-    width: 95%;
-  }
-}
-@media (min-width: 1440px) {
-  .carousel-item img {
-    height: 700px;
-  }
-  .carousel-caption {
-    bottom: 15%;
-    width: 70%;
   }
 }
 .main-content h3 {
